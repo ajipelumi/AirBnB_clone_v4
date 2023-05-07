@@ -18,5 +18,5 @@ header .logo {
     background-color: #cccccc;
   }
 .available {
-    background-color: #FF545F;
+    background-color: #FF545F !important;
 }
