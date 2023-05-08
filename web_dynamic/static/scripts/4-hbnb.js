@@ -55,4 +55,19 @@ $(document).ready(() => {
       placeSection.append(newPlace);
     }
   }
+
+  $('button').on('click', (event) => {
+    const amenitiesJson = {};
+    amenitiesJson.amenities = Object.keys(amenityIds);
+    $.ajax({
+      type: 'POST',
+      url: 'http://127.0.0.1:5001/api/v1/places_search/',
+      contentType: 'application/json',
+      data: JSON.stringify(amenitiesJson),
+      success: (response) => {
+        $('section.places').empty();
+        updatePlaces(response);
+      }
+    });
+  });
 });

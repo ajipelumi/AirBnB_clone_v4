@@ -1,7 +1,7 @@
 $(document).ready(() => {
   const amenityIds = {};
 
-  $('input').change( function() {
+  $('input').change(function () {
     const id = $(this).data('id');
     const name = $(this).data('name');
 

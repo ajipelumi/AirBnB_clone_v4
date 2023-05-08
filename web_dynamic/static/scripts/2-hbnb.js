@@ -19,11 +19,7 @@ $(document).ready(() => {
     type: 'GET',
     url: 'http://0.0.0.0:5001/api/v1/status/',
     success: (response) => {
-      if (response.data.status === 'OK') {
-        $('div#api_status').addClass('available');
-      } else {
-        $('div#api_status').removeClass('available');
-      }
+      $('div#api_status').addClass('available');
     }
   });
 });
